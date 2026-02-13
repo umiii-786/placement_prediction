@@ -1,0 +1,4 @@
+[core]
+    remote = myorigin
+['remote "myorigin"']
+    url = s3://placement-prediction
