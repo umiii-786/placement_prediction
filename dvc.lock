@@ -52,3 +52,29 @@ stages:
       md5: 7f5f0d2d0011afeeb820645096a3917f.dir
       size: 1170268
       nfiles: 2
+  model_training:
+    cmd: python -m src.model.train_model
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: 7f5f0d2d0011afeeb820645096a3917f.dir
+      size: 1170268
+      nfiles: 2
+    - path: src/model/train_model.py
+      hash: md5
+      md5: ccdd595a99bbe540a32edec413c728e7
+      size: 3497
+    params:
+      params.yaml:
+        lf_parameters.bootstrap: true
+        lf_parameters.class_weight: balanced
+        lf_parameters.max_depth: 3
+        lf_parameters.max_features: 0.5
+        lf_parameters.max_samples: 0.5
+        lf_parameters.n_estimators: 100
+    outs:
+    - path: models
+      hash: md5
+      md5: 7f8b1895786682d4475fb658658749c4.dir
+      size: 152906
+      nfiles: 2

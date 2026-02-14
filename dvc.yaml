@@ -21,3 +21,17 @@ stages:
     - src/features/feature_transformation.py
     outs:
     - data/processed
+  model_training:
+    cmd: python -m src.model.train_model
+    deps:
+    - data/processed
+    - src/model/train_model.py
+    params:
+    -  lf_parameters.n_estimators
+    -  lf_parameters.max_depth
+    -  lf_parameters.max_features
+    -  lf_parameters.bootstrap
+    -  lf_parameters.max_samples
+    -  lf_parameters.class_weight
+    outs:
+    - models
