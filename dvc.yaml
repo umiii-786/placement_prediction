@@ -27,11 +27,17 @@ stages:
     - data/processed
     - src/model/train_model.py
     params:
-    -  lf_parameters.n_estimators
-    -  lf_parameters.max_depth
-    -  lf_parameters.max_features
-    -  lf_parameters.bootstrap
-    -  lf_parameters.max_samples
-    -  lf_parameters.class_weight
+    - lf_parameters.n_estimators
+    - lf_parameters.max_depth
+    - lf_parameters.max_features
+    - lf_parameters.bootstrap
+    - lf_parameters.max_samples
+    - lf_parameters.class_weight
     outs:
     - models
+  model_testing:
+    cmd: python -m src.model.test_model
+    deps:
+    - data/processed
+    - models/
+    - src/model/test_model.py

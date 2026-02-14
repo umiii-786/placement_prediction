@@ -1,0 +1,2 @@
+2026-02-14 16:50:13,023 - ERROR - Error occurred during model evaluation: Invalid value "Training Accuracy:" for parameter 'name' supplied: Names may only contain alphanumerics, underscores (_), dashes (-), periods (.), spaces ( ) and slashes (/).
+2026-02-14 16:50:13,024 - ERROR - Model evaluation pipeline failed: Invalid value "Training Accuracy:" for parameter 'name' supplied: Names may only contain alphanumerics, underscores (_), dashes (-), periods (.), spaces ( ) and slashes (/).

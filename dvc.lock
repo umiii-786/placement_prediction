@@ -78,3 +78,20 @@ stages:
       md5: 7f8b1895786682d4475fb658658749c4.dir
       size: 152906
       nfiles: 2
+  model_testing:
+    cmd: python -m src.model.test_model
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: 7f5f0d2d0011afeeb820645096a3917f.dir
+      size: 1170268
+      nfiles: 2
+    - path: models/
+      hash: md5
+      md5: 7f8b1895786682d4475fb658658749c4.dir
+      size: 152906
+      nfiles: 2
+    - path: src/model/test_model.py
+      hash: md5
+      md5: ca3c92fdb203df1caa803e0e7de51d9a
+      size: 4055
